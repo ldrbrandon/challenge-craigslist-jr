@@ -5,14 +5,14 @@ require 'sinatra/activerecord'
 require 'shotgun'
 require 'models/item'
 
-# begin
+begin
 require 'dotenv'
 Dotenv.load
 
 set :database, ENV['DATABASE_URL']
 
-# rescue LoadError
-# end
+rescue LoadError
+end
 
 get '/' do
   @items = Item.all

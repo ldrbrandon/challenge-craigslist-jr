@@ -7,6 +7,6 @@ Capybara.app = Sinatra::Application
 
 RSpec.configure do |config|
   config.before do
-    Item.destroy_all
+    # Item.destroy_all
   end
 end
