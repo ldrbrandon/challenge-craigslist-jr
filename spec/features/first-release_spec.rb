@@ -1,4 +1,4 @@
-require './spec_helper'
+require 'spec_helper'
 
 include Rack::Test::Methods
 
@@ -9,6 +9,6 @@ end
 describe 'Home page' do
   it "should load the home page" do
     get '/'
-    expect(last_response).should be_ok
+    expect(last_response).to be_ok
   end
 end
